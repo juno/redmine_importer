@@ -1,0 +1,33 @@
+
+label_import: "导入"
+label_issue_importer: "问题列表导入工具"
+label_upload_notice: "请选择需要上传的问题列表CSV文件。文件必须具有标题行。"
+label_upload_format: "文件格式设置"
+label_upload_encoding: "编码:"
+label_upload_splitter: "字段分隔符:"
+label_upload_wrapper: "字段包裹符:"
+
+label_load_rules: "载入已保存的匹配规则"
+label_toplines: "参考文件 %s 的头几行:"
+label_match_columns: "字段配对"
+label_match_select: "选择对应的字段"
+label_import_rule: "导入规则"
+label_default_tracker: "默认跟踪:"
+label_update_issue: "更新已存在的问题"
+label_journal_field: "选择用于日志的字段:"
+label_unique_field: "选择用于标识问题的唯一字段:"
+label_update_other_project: "允许更新其他项目的问题"
+label_ignore_non_exist: "忽略不存在的问题"
+label_rule_name: "输入规则名称"
+
+label_import_result: "导入结果"
+label_result_notice: "处理了%d个问题。%d个问题被成功导入。"
+label_result_projects: "受影响的项目:"
+label_result_issues: "%d个问题"
+label_result_failed: "%d条失败的行:"
+
+option_ignore: "忽略"
+
+button_upload: "上传文件"
+button_submit: "提交"
+button_save_rules_and_submit: "存储匹配规则后提交"

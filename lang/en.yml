@@ -1,0 +1,33 @@
+
+label_import: "Import"
+label_issue_importer: "Issue Importer"
+label_upload_notice: "Select a CSV file to import. Import file must have a header row."
+label_upload_format: "File format settings"
+label_upload_encoding: "Encoding:"
+label_upload_splitter: "Field seperate char:"
+label_upload_wrapper: "Field wrap char:"
+
+label_load_rules: "Load saved rules"
+label_toplines: "Refer to top lines of %s："
+label_match_columns: "Matching Columns"
+label_match_select: "Select match field"
+label_import_rule: "Import rules"
+label_default_tracker: "Default tracker:"
+label_update_issue: "Update exists issue"
+label_journal_field: "Select field as journal:"
+label_unique_field: "Select unique field for identify issue:"
+label_update_other_project: "Allow update issues of other projects"
+label_ignore_non_exist: "Ignore none exist issues"
+label_rule_name: "Input rule name"
+
+label_import_result: "Import Result"
+label_result_notice: "%d issues processed. %d issues success imported."
+label_result_projects: "Affected projects:"
+label_result_issues: "%d issues"
+label_result_failed: "Failed %d rows:"
+
+option_ignore: "Ignore"
+
+button_upload: "Upload File"
+button_submit: "Submit"
+button_save_rules_and_submit: "Save match rules and submit"
