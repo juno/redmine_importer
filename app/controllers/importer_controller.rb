@@ -58,13 +58,7 @@ class ImporterController < ApplicationController
     end # do
 
     if @samples.size > 0
-      @headers = @samples[0].headers
-
-      # convert header encoding to UTF-8
-      nkf_option = nil
-      nkf_option = '-Sw' if encoding == 'S'
-      nkf_option = '-Ew' if encoding == 'EUC'
-      @headers.map! {|e| NKF.nkf('-m0 -x ' + nkf_option, e) } if nkf_option
+      @headers = convert_headers_encoding(@samples[0].headers, encoding)
     end
     
     # fields
@@ -242,7 +236,7 @@ class ImporterController < ApplicationController
     
     if @failed_issues.size > 0
       @failed_issues = @failed_issues.sort
-      @headers = @failed_issues[0][1].headers
+      @headers = convert_headers_encoding(@failed_issues[0][1].headers, encoding)
     end
   end
 
@@ -251,5 +245,12 @@ private
   def find_project
     @project = Project.find(params[:project_id])
   end
-  
+
+  def convert_headers_encoding(headers, encoding)
+    nkf_option = nil
+    nkf_option = '-Sw' if encoding == 'S'
+    nkf_option = '-Ew' if encoding == 'EUC'
+    nkf_option ? headers.map! {|e| NKF.nkf('-m0 -x ' + nkf_option, e)} : headers
+  end
+
 end
