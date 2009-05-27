@@ -23,7 +23,7 @@
 	<% @failed_issues.each do |id, issue| -%>
 	<tr class="<%= cycle("odd", "even") %>">
 		<td><%= id %></td>
-	    <% issue.each do |column| %><%= content_tag 'td', column[1] %><% end %>
+	    <% issue.each do |column| %><%= content_tag 'td', column[1].toutf8 %><% end %>
 	</tr>
 	<% end %>
 	</tbody>

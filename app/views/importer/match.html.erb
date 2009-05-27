@@ -66,7 +66,7 @@ END_OF_STRING
 	<tbody>
 	<% @samples.each do |issue| -%>
 	<tr class="<%= cycle("odd", "even") %>">
-	    <% issue.each do |column| %><%= content_tag 'td', column[1] %><% end %>
+	    <% issue.each do |column| %><%= content_tag 'td', column[1].toutf8 %><% end %>
 	</tr>
 	<% end %>
 	<tr class="<%= cycle("odd", "even") %>">

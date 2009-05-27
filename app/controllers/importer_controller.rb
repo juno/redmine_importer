@@ -1,5 +1,7 @@
+# -*- coding: utf-8 -*-
 require 'fastercsv'
 require 'tempfile'
+require 'nkf'
 
 class ImporterController < ApplicationController
   unloadable
@@ -54,9 +56,15 @@ class ImporterController < ApplicationController
         break
       end
     end # do
-    
+
     if @samples.size > 0
       @headers = @samples[0].headers
+
+      # convert header encoding to UTF-8
+      nkf_option = nil
+      nkf_option = '-Sw' if encoding == 'S'
+      nkf_option = '-Ew' if encoding == 'EUC'
+      @headers.map! {|e| NKF.nkf('-m0 -x ' + nkf_option, e) } if nkf_option
     end
     
     # fields
